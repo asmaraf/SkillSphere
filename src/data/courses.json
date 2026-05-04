@@ -1,0 +1,68 @@
+[
+  {
+    "id": 1,
+    "title": "Complete Web Development Bootcamp",
+    "instructor": "John Doe",
+    "duration": "20 hours",
+    "rating": 4.8,
+    "level": "Beginner",
+    "description": "Learn full-stack web development from scratch using HTML, CSS, JavaScript, React, and Node.js.",
+    "image": "https://img.freepik.com/free-vector/web-development-programmer-engineering-coding-website-augmented-reality-interface-screens-developer-project-engineer-programming-software-application-design-cartoon-illustration_107791-3863.jpg",
+    "category": "Development"
+  },
+  {
+    "id": 2,
+    "title": "Advanced UI/UX Design Principles",
+    "instructor": "Jane Smith",
+    "duration": "15 hours",
+    "rating": 4.9,
+    "level": "Intermediate",
+    "description": "Master the art of creating beautiful and functional user interfaces using Figma and modern design principles.",
+    "image": "https://img.freepik.com/free-vector/gradient-ui-ux-elements-background_23-2149056159.jpg",
+    "category": "Design"
+  },
+  {
+    "id": 3,
+    "title": "Digital Marketing Masterclass",
+    "instructor": "Mike Johnson",
+    "duration": "12 hours",
+    "rating": 4.7,
+    "level": "All Levels",
+    "description": "Comprehensive guide to SEO, Social Media Marketing, and Paid Advertising strategies.",
+    "image": "https://img.freepik.com/free-vector/digital-marketing-concept-with-online-advertising-media-symbols-flat_1284-31950.jpg",
+    "category": "Marketing"
+  },
+  {
+    "id": 4,
+    "title": "Python for Data Science",
+    "instructor": "Emily Davis",
+    "duration": "25 hours",
+    "rating": 4.8,
+    "level": "Intermediate",
+    "description": "Analyze data, create visualizations, and build predictive models using Python, Pandas, and Scikit-Learn.",
+    "image": "https://img.freepik.com/free-vector/data-science-concept-illustration_114360-8451.jpg",
+    "category": "Data Science"
+  },
+  {
+    "id": 5,
+    "title": "Mobile App Development with React Native",
+    "instructor": "Chris Wilson",
+    "duration": "18 hours",
+    "rating": 4.6,
+    "level": "Intermediate",
+    "description": "Build cross-platform mobile applications for iOS and Android using React Native.",
+    "image": "https://img.freepik.com/free-vector/app-development-illustration_52683-47931.jpg",
+    "category": "Development"
+  },
+  {
+    "id": 6,
+    "title": "Photography Fundamentals",
+    "instructor": "Sarah Brown",
+    "duration": "8 hours",
+    "rating": 4.9,
+    "level": "Beginner",
+    "description": "Learn how to take professional photos using your DSLR or mirrorless camera.",
+    "image": "https://img.freepik.com/free-vector/photographer-concept-illustration_114360-2647.jpg",
+    "category": "Photography"
+  }
+]
