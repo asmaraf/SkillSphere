@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import coursesData from "@/data/courses.json";
 import Link from "next/link";
 import { Star, Clock, User, BookOpen, TrendingUp, Award } from "lucide-react";
+import { authClient } from "@/lib/auth-client";
 
 export default function Home() {
   const popularCourses = coursesData.slice(0, 3);
