@@ -50,10 +50,12 @@ export default function UpdateProfilePage() {
   };
 
   return (
-    <div className="container mx-auto px-4 py-12 max-w-xl min-h-[70vh]">
-      <Link href="/my-profile" className="btn btn-ghost mb-6">← Back to Profile</Link>
+    <div className="container mx-auto px-4 py-12 flex flex-col items-center min-h-[70vh]">
+      <div className="w-full max-w-md">
+        <Link href="/my-profile" className="btn btn-ghost mb-6">← Back to Profile</Link>
+      </div>
       
-      <div className="card bg-base-100 shadow-2xl border border-base-200">
+      <div className="card w-full max-w-md bg-base-100 shadow-2xl border border-base-200">
         <div className="card-body">
           <h2 className="text-3xl font-bold text-primary mb-6">Update Information</h2>
           <form onSubmit={handleUpdate}>
