@@ -8,6 +8,7 @@ import { Star, Clock, User, BookOpen, TrendingUp, Award } from "lucide-react";
 export default function Home() {
   const popularCourses = coursesData.slice(0, 3);
   const trendingCourses = coursesData.slice(3, 6);
+  const { data: session } = authClient.useSession();
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -38,7 +39,11 @@ export default function Home() {
             </p>
             <div className="flex gap-4 justify-center">
               <Link href="/courses" className="btn btn-primary btn-lg">Explore Courses</Link>
-              <Link href="/register" className="btn btn-outline btn-lg">Join for Free</Link>
+              {!session ? (
+                <Link href="/register" className="btn btn-outline btn-lg">Join for Free</Link>
+              ) : (
+                <Link href="/my-profile" className="btn btn-outline btn-lg">My Profile</Link>
+              )}
             </div>
           </motion.div>
         </div>
