@@ -1,4 +1,5 @@
 "use client";
+import { useState, useEffect } from "react";
 
 import { motion } from "framer-motion";
 import coursesData from "@/data/courses.json";
@@ -10,6 +11,11 @@ export default function Home() {
   const popularCourses = coursesData.slice(0, 3);
   const trendingCourses = coursesData.slice(3, 6);
   const { data: session } = authClient.useSession();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -40,10 +46,15 @@ export default function Home() {
             </p>
             <div className="flex gap-4 justify-center">
               <Link href="/courses" className="btn btn-primary btn-lg">Explore Courses</Link>
-              {!session ? (
+              {mounted && (
+                !session ? (
+                  <Link href="/register" className="btn btn-outline btn-lg">Join for Free</Link>
+                ) : (
+                  <Link href="/my-profile" className="btn btn-outline btn-lg">My Profile</Link>
+                )
+              )}
+              {!mounted && (
                 <Link href="/register" className="btn btn-outline btn-lg">Join for Free</Link>
-              ) : (
-                <Link href="/my-profile" className="btn btn-outline btn-lg">My Profile</Link>
               )}
             </div>
           </motion.div>
