@@ -32,7 +32,7 @@ export default function RootLayout({
       data-theme="light"
       suppressHydrationWarning
     >
-      <body className="min-h-full flex flex-col bg-base-100 text-base-content">
+      <body className="min-h-full flex flex-col bg-base-100 text-base-content" suppressHydrationWarning>
         <Navbar />
         <main className="flex-grow flex flex-col">{children}</main>
         <Footer />
