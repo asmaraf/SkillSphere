@@ -1,23 +1,30 @@
+import { MongoClient } from "mongodb";
 import { betterAuth } from "better-auth";
-import { prismaAdapter } from "better-auth/adapters/prisma";
-import { PrismaClient } from "@prisma/client";
-import { PrismaLibSql } from "@prisma/adapter-libsql";
+import { mongodbAdapter } from "better-auth/adapters/mongodb";
+import { memoryAdapter } from "@better-auth/memory-adapter";
 
-import path from "path";
+const databaseUrl = process.env.DATABASE_URL;
+const useMemoryAdapter = process.env.NODE_ENV !== "production" && (!databaseUrl || databaseUrl.includes("localhost") || databaseUrl.includes("127.0.0.1"));
 
-const dbPath = path.resolve(process.cwd(), "dev.db").replace(/\\/g, "/");
-
-const adapter = new PrismaLibSql({
-  url: `file:${dbPath}`,
-});
-
-export const prisma = new PrismaClient({ adapter } as ConstructorParameters<typeof PrismaClient>[0]);
+const database = useMemoryAdapter
+  ? memoryAdapter({
+      user: [],
+      account: [],
+      session: [],
+      verification: [],
+    })
+  : (() => {
+      const client = new MongoClient(databaseUrl as string);
+      const db = client.db();
+      return mongodbAdapter(db, {
+        client,
+        transaction: false,
+      });
+    })();
 
 export const auth = betterAuth({
     baseURL: process.env.BETTER_AUTH_URL,
-    database: prismaAdapter(prisma, {
-        provider: "sqlite",
-    }),
+    database,
     emailAndPassword: {
         enabled: true,
         autoSignIn: true,

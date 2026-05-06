@@ -18,7 +18,7 @@ The purpose of SkillSphere is to provide a seamless, secure, and engaging enviro
 
 ## 🛠️ Tech Stack & Packages
 - **Framework**: [Next.js 16 (Turbopack)](https://nextjs.org/)
-- **Database**: [Prisma 7](https://www.prisma.io/) with LibSQL adapter for SQLite
+- **Database**: MongoDB
 - **Authentication**: [Better Auth](https://www.better-auth.com/)
 - **Styling**: [TailwindCSS v4](https://tailwindcss.com/) & [DaisyUI](https://daisyui.com/)
 - **Icons**: [Lucide React](https://lucide.dev/)
@@ -34,16 +34,11 @@ npm install
 
 Set up your environment variables in a `.env` file:
 ```env
-DATABASE_URL="file:./dev.db"
+DATABASE_URL="mongodb://localhost:27017/skill-sphere"
 BETTER_AUTH_SECRET="your_secret"
 BETTER_AUTH_URL="http://localhost:3000"
 GOOGLE_CLIENT_ID="your_google_client_id"
 GOOGLE_CLIENT_SECRET="your_google_client_secret"
-```
-
-Generate the Prisma client:
-```bash
-npx prisma generate
 ```
 
 Run the development server:
