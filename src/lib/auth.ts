@@ -1,30 +1,16 @@
 import { MongoClient } from "mongodb";
 import { betterAuth } from "better-auth";
 import { mongodbAdapter } from "better-auth/adapters/mongodb";
-import { memoryAdapter } from "@better-auth/memory-adapter";
 
-const databaseUrl = process.env.DATABASE_URL;
-const useMemoryAdapter = process.env.NODE_ENV !== "production" && (!databaseUrl || databaseUrl.includes("localhost") || databaseUrl.includes("127.0.0.1"));
-
-const database = useMemoryAdapter
-  ? memoryAdapter({
-      user: [],
-      account: [],
-      session: [],
-      verification: [],
-    })
-  : (() => {
-      const client = new MongoClient(databaseUrl as string);
-      const db = client.db();
-      return mongodbAdapter(db, {
-        client,
-        transaction: false,
-      });
-    })();
+const client = new MongoClient(process.env.DATABASE_URL as string);
+const db = client.db();
 
 export const auth = betterAuth({
     baseURL: process.env.BETTER_AUTH_URL,
-    database,
+    database: mongodbAdapter(db, {
+        client,
+        transaction: false,
+    }),
     emailAndPassword: {
         enabled: true,
         autoSignIn: true,
