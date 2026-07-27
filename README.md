@@ -65,16 +65,18 @@ The goal of **SkillSphere** is to provide a secure, responsive, and engaging onl
 
 ## 📦 Main Dependencies
 
-- next
-- react
-- typescript
-- mongodb
-- better-auth
-- tailwindcss
-- daisyui
-- framer-motion
-- lucide-react
-- react-toastify
+| Dependency | Purpose |
+|------------|---------|
+| Next.js | React Framework |
+| React | UI Development |
+| TypeScript | Type Safety |
+| MongoDB | Database |
+| Better Auth | Authentication |
+| Tailwind CSS | Styling |
+| DaisyUI | UI Components |
+| Framer Motion | Animations |
+| Lucide React | Icons |
+| React Toastify | Notifications |
 
 ---
 
