@@ -1,49 +1,168 @@
-# SkillSphere 🚀
+# 🎓 SkillSphere
 
-SkillSphere is a modern, high-performance online learning platform designed to empower students and professionals to upgrade their skills through industry-expert courses.
+SkillSphere is a modern online learning platform designed to help students and professionals enhance their skills through high-quality, industry-expert courses. The platform offers secure authentication, intuitive course discovery, personalized user profiles, and a premium learning experience.
 
-## 🔗 Live Demo
-Check out the live application here: [SkillSphere Live](https://asmaraf.github.io/SkillSphere/)
+---
 
-## 🎯 Purpose
-The purpose of SkillSphere is to provide a seamless, secure, and engaging environment for users to discover and enroll in high-quality courses. It bridges the gap between expert knowledge and eager learners with a premium user experience.
+## 🌐 Live Demo
+
+🔗 https://skill-sphere-lyart.vercel.app/
+
+---
+
+## 📸 Screenshot
+
+![SkillSphere Screenshot](assets/Screenshot.png)
+
+---
+
+## 🎯 Project Purpose
+
+The goal of **SkillSphere** is to provide a secure, responsive, and engaging online learning platform where users can discover, explore, and enroll in expert-led courses. It bridges the gap between industry professionals and learners through a modern user experience.
+
+---
 
 ## ✨ Key Features
-- **Secure Authentication**: Robust login and registration system powered by `Better Auth`, supporting both Email/Password and Google Social Login.
-- **Course Discovery**: Dynamic course listing with search functionality to quickly find relevant topics.
-- **Detailed Insights**: Comprehensive course details including curriculum, learning objectives, and instructor information.
-- **User Profiles**: Personalized profile management where users can view and update their information.
-- **Premium UI/UX**: Built with `DaisyUI` and `TailwindCSS` for a sleek, responsive design with smooth animations powered by `Framer Motion`.
-- **Real-time Feedback**: Integrated toast notifications for successful actions and error handling.
 
-## 🛠️ Tech Stack & Packages
-- **Framework**: [Next.js 16 (Turbopack)](https://nextjs.org/)
-- **Database**: MongoDB
-- **Authentication**: [Better Auth](https://www.better-auth.com/)
-- **Styling**: [TailwindCSS v4](https://tailwindcss.com/) & [DaisyUI](https://daisyui.com/)
-- **Icons**: [Lucide React](https://lucide.dev/)
-- **Animations**: [Framer Motion](https://www.framer.com/motion/)
-- **Notifications**: [React Toastify](https://fkhadra.github.io/react-toastify/introduction)
+- 🔐 Secure Authentication using Better Auth
+- 📧 Email & Password Authentication
+- 🔑 Google Social Login
+- 📚 Browse and search available courses
+- 📖 Detailed course information with curriculum
+- 👨‍🏫 Instructor profiles and learning objectives
+- 👤 Personalized user profile management
+- 🎨 Responsive and modern UI
+- ✨ Smooth page transitions with Framer Motion
+- 🔔 Real-time notifications using React Toastify
+
+---
+
+## 🛠️ Tech Stack
+
+<p align="center">
+<img src="https://skillicons.dev/icons?i=nextjs,ts,mongodb,tailwind" />
+</p>
+
+### Frontend
+
+- Next.js 16 (App Router)
+- TypeScript
+- Tailwind CSS v4
+- DaisyUI
+
+### Backend
+
+- Better Auth
+- MongoDB
+
+### Libraries
+
+- Framer Motion
+- Lucide React
+- React Toastify
+
+---
+
+## 📦 Main Dependencies
+
+- next
+- react
+- typescript
+- mongodb
+- better-auth
+- tailwindcss
+- daisyui
+- framer-motion
+- lucide-react
+- react-toastify
+
+---
 
 ## 🚀 Getting Started
 
-First, install the dependencies:
+### Clone Repository
+
+```bash
+git clone https://github.com/asmaraf/SkillSphere.git
+```
+
+### Navigate to Project
+
+```bash
+cd SkillSphere
+```
+
+### Install Dependencies
+
 ```bash
 npm install
 ```
 
-Set up your environment variables in a `.env` file:
+---
+
+## ⚙️ Environment Variables
+
+Create a `.env` file in the root directory.
+
 ```env
 DATABASE_URL="mongodb://localhost:27017/skill-sphere"
+
 BETTER_AUTH_SECRET="your_secret"
+
 BETTER_AUTH_URL="http://localhost:3000"
+
 GOOGLE_CLIENT_ID="your_google_client_id"
+
 GOOGLE_CLIENT_SECRET="your_google_client_secret"
 ```
 
-Run the development server:
+---
+
+## ▶️ Run Development Server
+
 ```bash
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Visit
+
+```
+http://localhost:3000
+```
+
+---
+
+## 📂 Project Structure
+
+```
+SkillSphere
+│
+├── app
+├── components
+├── public
+├── assets
+├── lib
+├── package.json
+└── README.md
+```
+
+---
+
+## 🌍 Links
+
+- 🌐 Live Site: https://skill-sphere-lyart.vercel.app/
+- 💻 GitHub Repository: https://github.com/asmaraf/SkillSphere
+
+---
+
+## 👨‍💻 Author
+
+**ASM Araf**
+
+GitHub: https://github.com/asmaraf
+
+---
+
+## ⭐ Support
+
+If you found this project useful, please consider giving it a ⭐ on GitHub.
